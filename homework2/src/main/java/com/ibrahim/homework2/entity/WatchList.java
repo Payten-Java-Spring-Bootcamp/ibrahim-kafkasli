@@ -11,7 +11,6 @@ import java.util.List;
 @Setter
 @Builder
 public class WatchList {
-    private int memberId;
     private int watchListId;
     private List<String> watchList;
 }

@@ -1,50 +1,43 @@
 package com.ibrahim.homework2.controller;
 
+import com.ibrahim.homework2.dto.MovieDto;
 import com.ibrahim.homework2.entity.Movie;
-import com.ibrahim.homework2.enums.Genre;
+import com.ibrahim.homework2.service.MovieService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.Year;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
+@Api(value = "Movie Api Documentation")
 public class MovieController {
 
+    private final MovieService movieService ;
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/movie")
-    public void Movie(@RequestBody Movie movie){
-        Movie.builder()
-                .name(movie.getName())
-                .genre(movie.getGenre())
-                .castList(movie.getCastList())
-                .releaseYear(movie.getReleaseYear())
-                .director(movie.getDirector())
-                .build();
+    @ApiOperation(value = "create new movie")
+    public Movie movie(@RequestBody MovieDto movie){
+        return movieService.create(movie);
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/movie")
-    public Movie Movie(){
-        List<String> casts = new ArrayList<>();
-        casts.add("Matthew McConaughey");
-        casts.add("Anne Hathaway");
-        return (Movie) Movie.builder()
-                .name("Interstaller")
-                .genre("Science_Fiction")
-                .castList(casts)
-                .releaseYear("2014")
-                .director("Christopher Nolan")
-                .build();
+    @ApiOperation(value = "get all movies from database")
+    public Movie movie(){
+        return movieService.getMovie();
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/movie")
-    public void Movie(@RequestBody String name){
-        
+    @ApiOperation(value = "delete movie with movie")
+    public ResponseEntity<String> movie(@RequestBody String name){
+        return ResponseEntity.ok(movieService.deleteMovie(name));
     }
 
 }
+
