@@ -14,6 +14,7 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 public class Cast {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

@@ -1,5 +1,6 @@
 package com.ibrahim.homework3.controller;
 
+import com.ibrahim.homework3.dto.MemberDto;
 import com.ibrahim.homework3.dto.WatchListDto;
 import com.ibrahim.homework3.entity.WatchList;
 import com.ibrahim.homework3.service.MemberService;
@@ -35,6 +36,12 @@ public class MemberController {
     @ApiOperation(value = "member adds movie in watch list")
     public void WatchList(@RequestBody Long memberId, @RequestBody Long movieId){
         memberService.addOnWatchList(memberId, movieId);
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("/member")
+    public void Member(@RequestBody MemberDto memberDto){
+        memberService.createMember(memberDto);
     }
 
 }

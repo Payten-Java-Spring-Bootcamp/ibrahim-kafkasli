@@ -28,5 +28,5 @@ public class Member implements Serializable {
     private String userName;
 
     @ApiModelProperty(value = "watch list of member")
-    private int watchListId;
+    private Long watchListId;
 }

@@ -1,17 +1,13 @@
 package com.ibrahim.homework3.service;
 
-import com.ibrahim.homework3.controller.MovieController;
 import com.ibrahim.homework3.dto.MovieDto;
 import com.ibrahim.homework3.entity.Movie;
 import com.ibrahim.homework3.repository.MovieRepository;
 import com.ibrahim.homework3.service.impl.MovieServiceImpl;
-import com.sun.org.apache.bcel.internal.ExceptionConst;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 @Service
 @RequiredArgsConstructor
