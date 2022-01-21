@@ -11,11 +11,9 @@ import java.util.List;
 
 @Getter
 @Setter
-@Builder
 @ApiModel(value = "Movie Api Entity Documentation", description = "Entity")
 @Entity
 @Table(name = "Movie")
-@NoArgsConstructor
 @ToString
 @EqualsAndHashCode(of = {"id"})
 public class Movie {

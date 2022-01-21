@@ -10,10 +10,8 @@ import java.util.List;
 
 @Getter
 @Setter
-@Builder
 @Entity
 @Table
-@NoArgsConstructor
 public class WatchList {
 
     @Id

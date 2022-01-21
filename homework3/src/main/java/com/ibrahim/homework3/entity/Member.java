@@ -12,9 +12,7 @@ import java.io.Serializable;
 @Table(name = "Member")
 @Getter
 @Setter
-@Builder
 @EqualsAndHashCode(of = {"id"})
-@NoArgsConstructor
 @ToString
 public class Member implements Serializable {
 
