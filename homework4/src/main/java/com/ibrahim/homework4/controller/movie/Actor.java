@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class Cast {
+public class Actor {
 
     private String name;
 
