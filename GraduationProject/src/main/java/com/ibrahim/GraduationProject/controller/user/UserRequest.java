@@ -1,15 +1,19 @@
 package com.ibrahim.GraduationProject.controller.user;
 
 import com.ibrahim.GraduationProject.service.user.User;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.lang.Nullable;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
 import java.util.Random;
 
 @Getter
 @Setter
+@EqualsAndHashCode(of = "tc")
 public class UserRequest {
 
     @NotBlank
@@ -21,19 +25,19 @@ public class UserRequest {
     @NotBlank
     private String surName;
 
-    @NotBlank
-    private String monthlyIncome;
+    @NotNull
+    private float monthlyIncome;
 
     @NotBlank
     private String phoneNumber;
 
-    @Null
+    @Nullable
     private int creditScore;
 
 
     public User convertToUser() {
         Random r = new Random();
-        this.creditScore = r.nextInt(101);
+        this.creditScore = r.nextInt(2001);
         return User.builder()
                 .tc(tc)
                 .name(name)

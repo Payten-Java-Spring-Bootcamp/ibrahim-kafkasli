@@ -5,11 +5,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class MovieService {
 
-
-
-    public int create(Movie movie) {
-
-
+    private final MovieRepository movieRepository;
+    public void createMovie(Movie movie) {
 
     }
 }

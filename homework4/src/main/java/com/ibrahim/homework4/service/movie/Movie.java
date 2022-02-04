@@ -1,35 +1,21 @@
 package com.ibrahim.homework4.service.movie;
 
-import com.ibrahim.homework4.controller.movie.Actor;
-import com.ibrahim.homework4.controller.movie.request.MovieRequest;
 import com.ibrahim.homework4.enums.Genre;
-import lombok.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Getter
 @Setter
-@Data
 @Builder
 public class Movie {
-
-    @NotBlank
-    private String movieName;
-
-    @NotNull
+    private String name;
     private Genre genre;
-
-    @NotNull
-    private LocalDate releaseYear;
-
-    @NotBlank
+    private LocalDateTime localDateTime;
     private String director;
-
-    @NotNull
-    private Set<Actor> actorSet;
-
-
+    private Set<String> casts;
 }

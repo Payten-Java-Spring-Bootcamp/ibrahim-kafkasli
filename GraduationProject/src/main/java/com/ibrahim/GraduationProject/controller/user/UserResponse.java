@@ -16,12 +16,6 @@ public class UserResponse {
 
     private String surName;
 
-    private String monthlyIncome;
-
-    private String phoneNumber;
-
-    private int creditScore;
-
     public static UserResponse convertFromUser(User user) {
         return UserResponse.builder()
                 .tc(user.getTc())

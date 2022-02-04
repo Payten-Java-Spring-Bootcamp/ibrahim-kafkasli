@@ -1,5 +1,6 @@
 package com.ibrahim.GraduationProject.repository.user;
 
+import com.ibrahim.GraduationProject.repository.loan.LoanEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name = "user")
+@Table(name = "users")
 public class UserEntity {
 
     @Id
@@ -21,7 +22,7 @@ public class UserEntity {
 
     private String surName;
 
-    private String monthlyIncome;
+    private float monthlyIncome;
 
     private String phoneNumber;
 

@@ -1,7 +1,6 @@
 package com.ibrahim.homework4.repository.movie;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public class MovieRepository {
+public interface MovieRepository extends JpaRepository<> {
 }

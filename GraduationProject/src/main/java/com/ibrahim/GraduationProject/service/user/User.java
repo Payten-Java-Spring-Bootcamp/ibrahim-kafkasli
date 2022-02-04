@@ -16,11 +16,22 @@ public class User {
 
     private String surName;
 
-    private String monthlyIncome;
+    private float monthlyIncome;
 
     private String phoneNumber;
 
     private int creditScore;
+
+    public static User convertFromUserEntity(UserEntity userEntity) {
+        return User.builder()
+                    .tc(userEntity.getTc())
+                    .name(userEntity.getName())
+                    .surName(userEntity.getSurName())
+                    .monthlyIncome(userEntity.getMonthlyIncome())
+                    .phoneNumber(userEntity.getPhoneNumber())
+                    .creditScore(userEntity.getCreditScore())
+                    .build();
+    }
 
     public UserEntity convertToUserEntity() {
         UserEntity userEntity = new UserEntity();
