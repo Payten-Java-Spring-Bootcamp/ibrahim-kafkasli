@@ -1,6 +1,7 @@
 package com.ibrahim.GraduationProject.service.user;
 
 import com.ibrahim.GraduationProject.repository.user.UserEntity;
+import io.swagger.annotations.ApiModel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

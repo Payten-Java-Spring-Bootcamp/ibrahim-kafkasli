@@ -1,5 +1,6 @@
 package com.ibrahim.GraduationProject.controller.Loan;
 
+import com.ibrahim.GraduationProject.repository.loan.LoanEntity;
 import com.ibrahim.GraduationProject.service.loan.Loan;
 import lombok.Builder;
 import lombok.Getter;

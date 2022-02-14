@@ -1,8 +1,10 @@
 package com.ibrahim.GraduationProject.service.user;
 
+import com.ibrahim.GraduationProject.exception.custom.EntityNotFoundException;
+
 public interface UserService {
-    Long createUser(User user);
-    User getUser(String tc);
-    void deleteUser(String tc);
-    User updateUser(String tc, User convertToUser);
+    User createUser(User user) throws  EntityNotFoundException;
+    User getUser(String tc) throws EntityNotFoundException;
+    void deleteUser(String tc) throws EntityNotFoundException;
+    User updateUser(String tc, User convertToUser) throws EntityNotFoundException;
 }

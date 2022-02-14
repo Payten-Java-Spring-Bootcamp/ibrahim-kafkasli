@@ -9,13 +9,14 @@ services:
     ports:
       - 5432:5432 #5432 portunu disari actik
     environment:
-      POSTGRES_PASSWORD: benimSifrem
+      POSTGRES_PASSWORD:
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+
 
 #docker-compose -f docker-compose.yml up -d
 #docker login --username your_user_name
