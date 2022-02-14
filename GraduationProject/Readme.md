@@ -1,4 +1,5 @@
-##Proje Nasıl Çalıştırılır?
+
+## Proje Nasıl Çalıştırılır?
 
 - Öncelikle docker kurulu bir cihazda docker compose dosyası aşağıdaki komut ile çalıştırılmalıdır:
 ```
@@ -11,7 +12,7 @@ mvn spring-boot:run
 ```
 
 
-##Proje'de Kullanılan Teknolojiler
+## Proje'de Kullanılan Teknolojiler
 
 - Spring Boot
 - Swagger
@@ -20,5 +21,5 @@ mvn spring-boot:run
 - Lombok
 - Twilio
 
-##Mimari Yaklaşım
+## Mimari Yaklaşım
 - Bu proje mümkün olduğunca rest conventionlarına uyularak, katmanlı mimari dikkate alınarak yazılmıştır.

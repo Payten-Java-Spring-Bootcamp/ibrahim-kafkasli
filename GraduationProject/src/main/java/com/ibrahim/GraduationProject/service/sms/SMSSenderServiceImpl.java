@@ -19,9 +19,6 @@ import com.twilio.type.PhoneNumber;
 @Slf4j
 public class SMSSenderServiceImpl implements SMSSenderService{
 
-    public static final String ACCOUNT_SID = "ACdc87543283347bbfc5bb51843e6e93c7";
-    public static final String AUTH_TOKEN = "a84fe4d80b39212cb11972eb14292c15";
-    public static final String twilioNumber = "+19106212706";
 
 
     private final SmsLogRepository smsLogRepository;
