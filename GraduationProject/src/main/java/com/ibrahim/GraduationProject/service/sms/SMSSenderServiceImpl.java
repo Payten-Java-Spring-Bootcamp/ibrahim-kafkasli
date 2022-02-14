@@ -20,6 +20,7 @@ import com.twilio.type.PhoneNumber;
 public class SMSSenderServiceImpl implements SMSSenderService{
 
 
+    public static final String twilioNumber = "+19106212706";
 
     private final SmsLogRepository smsLogRepository;
     private final ErrorServiceImpl errorServiceImpl;
